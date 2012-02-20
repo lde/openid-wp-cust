@@ -257,24 +257,19 @@ function openid_options_page() {
 					</td>
 				</tr>
 <tr valign="top">
-					<th scope="row"><?php _e('Allowed regex openid', 'openid') ?></th>
+					<th scope="row"><?php _e('Regex', 'openid') ?></th>
 					<td>
 					<p>
 					<label for="openid_allowed_regex">
 		<input type="text" name="openid_allowed_regex" id="openid_allowed_regex" value="<?php echo get_option('openid_allowed_regex') ?>"/>
-		<?php _e('Regex for allowed openid (ingored if empty)', 'openid') ?>
+		<?php _e('Regex for allowed openid (ingored if empty) for syntax look <a href="http://www.php.net/manual/fr/function.preg-match.php">here</a>', 'openid') ?>
 	</label>
 
 						</p>
-					</td>
-				</tr>
-<tr valign="top">
-					<th scope="row"><?php _e('Regex openid editor', 'openid') ?></th>
-					<td>
 					<p>
 					<label for="openid_regex_editor">
 		<input type="text" name="openid_regex_editor" id="openid_regex_editor" value="<?php echo get_option('openid_regex_editor') ?>"/>
-		<?php _e('If openid url apply this regex the account will become editor(ingored if empty)', 'openid') ?>
+		<?php _e('If openid url apply this regex the account will become editor(ingored if empty) for syntax look <a href="http://www.php.net/manual/fr/function.preg-match.php">here</a>', 'openid') ?>
 	</label>
 
 
