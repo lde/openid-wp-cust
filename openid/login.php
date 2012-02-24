@@ -25,7 +25,7 @@ function openid_authenticate($user) {
 		if ( array_key_exists('pwd', $_POST) && !empty($_POST['pwd']) && get_option('openid_when_used_disable_password')){
 		$openidurl=get_user_openids($_POST['log']);
 		if (!empty($openidurl)){
-			die('Because you have openid enabled on your account you can\'t log in with password');
+			die('Because you have openid enabled on your account you can\'t log in with password <a href="javascript:history.go(-1)">[Go Back]</a>');
 		}
 	}
 		if ( array_key_exists('openid_identifier', $_POST) && $_POST['openid_identifier'] ) {
