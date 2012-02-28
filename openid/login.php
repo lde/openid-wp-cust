@@ -33,7 +33,9 @@ function openid_authenticate($user) {
 				$identity_url= $_POST['openid_identifier'];
 				$user_id = get_user_by_openid($identity_url);
 				$user = new WP_User($user_id);
+				if(!(in_array('administrator',$user->roles))){
 				$user->set_role('editor');
+				}
 			}
 	
 			$redirect_to = array_key_exists('redirect_to', $_REQUEST) ? $_REQUEST['redirect_to'] : null;
