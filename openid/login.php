@@ -79,7 +79,27 @@ function openid_authenticate($user) {
 
 function openid_finish_login($identity_url, $action) {
 	if ($action != 'login') return;
-		
+	
+              $openiddata=openid_get_user_data($identity_url);
+              $user=get_user_by('login',$openiddata['user_email']);
+
+               if(get_option('openid_allowed_regex_email')){
+               	if (!(preg_match(get_option('openid_allowed_regex_email'),$openiddata['user_email']))){
+               	die('You are not allowed to login in this application <a href="javascript:history.go(-1)">[Go Back]</a>');
+               }
+              }
+			if ($user){
+				openid_add_user_identity($user->ID,$identity_url);
+			}
+			
+			if (get_option('openid_allowed_regex_email_editor') && (preg_match(get_option('openid_allowed_regex_email_editor'),$openiddata['user_email']))){
+				$user_id = get_user_by_openid($identity_url);
+				$user = new WP_User($user_id);
+				if(!(in_array('administrator',$user->roles))){
+				$user->set_role('editor');
+				}
+			}
+			
 	// create new user account if appropriate
 	$user_id = get_user_by_openid($identity_url);
 	if ( $identity_url && !$user_id && get_option('users_can_register') ) {
@@ -152,7 +172,10 @@ function openid_wp_login_form() {
 
 	<p style="font-size: 0.9em; margin: 8px 0 24px 0;" id="what_is_openid">
 		<a href="http://openid.net/what/" target="_blank">'.__('Learn about OpenID', 'openid').'</a>
-	</p>';
+	</p>
+	<div onclick="javascript:document.getElementById(\'openid_identifier\').value=\'https://www.google.com/accounts/o8/id\';document.forms[\'loginform\'].submit()">
+              <img src="wp-content/plugins/openid/google.png"/>
+       </div>';
 }
 
 

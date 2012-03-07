@@ -81,6 +81,8 @@ function openid_admin_register_settings() {
 	register_setting('openid', 'openid_when_used_disable_password');
 	register_setting('openid', 'openid_allowed_regex');
 	register_setting('openid', 'openid_regex_editor');
+	register_setting('openid', 'openid_allowed_regex_email');
+	register_setting('openid', 'openid_allowed_regex_email_editor');
 }
 
 
@@ -262,7 +264,7 @@ function openid_options_page() {
 					<p>
 					<label for="openid_allowed_regex">
 		<input type="text" name="openid_allowed_regex" id="openid_allowed_regex" value="<?php echo get_option('openid_allowed_regex') ?>"/>
-		<?php _e('Regex for allowed openid (ingored if empty) for syntax look <a href="http://www.php.net/manual/fr/function.preg-match.php">here</a>', 'openid') ?>
+		<?php _e('Regex for allowed openid (ignored if empty) for syntax look <a href="http://www.php.net/manual/fr/function.preg-match.php">here</a>', 'openid') ?>
 	</label>
 
 						</p>
@@ -270,6 +272,22 @@ function openid_options_page() {
 					<label for="openid_regex_editor">
 		<input type="text" name="openid_regex_editor" id="openid_regex_editor" value="<?php echo get_option('openid_regex_editor') ?>"/>
 		<?php _e('If openid url apply this regex the account will become editor(ingored if empty) for syntax look <a href="http://www.php.net/manual/fr/function.preg-match.php">here</a>', 'openid') ?>
+	</label>
+
+
+						</p>
+						<p>
+					<label for="openid_allowed_regex_email">
+		<input type="text" name="openid_allowed_regex_email" id="openid_allowed_regex_email" value="<?php echo get_option('openid_allowed_regex_email') ?>"/>
+		<?php _e('Regex for allowed email returned by openid (ignored if empty) for syntax look <a href="http://www.php.net/manual/fr/function.preg-match.php">here</a>', 'openid') ?>
+	</label>
+
+
+						</p>
+												<p>
+					<label for="openid_allowed_regex_email_editor">
+		<input type="text" name="openid_allowed_regex_email_editor" id="openid_allowed_regex_email_editor" value="<?php echo get_option('openid_allowed_regex_email_editor') ?>"/>
+		<?php _e('If openid email returned by openid apply this regex the account will become editor(ingored if empty) for syntax look <a href="http://www.php.net/manual/fr/function.preg-match.php">here</a>', 'openid') ?>
 	</label>
 
 

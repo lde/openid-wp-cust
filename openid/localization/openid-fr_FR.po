@@ -13,608 +13,620 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
-"X-Textdomain-Support: yes\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
 
-#@ openid
 #: admin_panels.php:24
+#@ openid
 msgid "OpenID options"
 msgstr "Options OpenID"
 
-#@ openid
 #: admin_panels.php:24
+#@ openid
 msgid "OpenID"
 msgstr "OpenID"
 
-#@ openid
 #: admin_panels.php:29
+#@ openid
 msgid "Your OpenIDs"
 msgstr "Vos OpenIDs"
 
-#@ openid
 #: admin_panels.php:43
 #: admin_panels.php:44
-#: admin_panels.php:471
+#: admin_panels.php:489
+#@ openid
 msgid "Your Trusted Sites"
 msgstr "Vos sites de confiance"
 
-#@ openid
 #: admin_panels.php:59
 #: admin_panels.php:65
-#: admin_panels.php:158
+#: admin_panels.php:160
+#@ openid
 msgid "OpenID Settings"
 msgstr "Réglages OpenID"
 
+#: admin_panels.php:123
 #@ default
-#: admin_panels.php:121
 msgid "Settings"
 msgstr "Paramètres"
 
+#: admin_panels.php:144
 #@ openid
-#: admin_panels.php:142
 msgid "OpenID cache refreshed."
 msgstr "Cache OpenID rafraîchi."
 
+#: admin_panels.php:163
 #@ openid
-#: admin_panels.php:161
 msgid "Please note that all OpenID Consumer options have been moved to their respective sections of the <a href=\"options-general.php\">General Settings</a> and <a href=\"options-discussion.php\">Discussion Settings</a> pages."
 msgstr "Attention ! Les options OpenID concernant les utilisateurs ont été déplacées dans les sections respectives des menus <a href=\"options-general.php\">Options générales</a> et <a href=\"options-discussion.php\">Options de discussion</a>."
 
+#: admin_panels.php:173
 #@ openid
-#: admin_panels.php:171
 msgid "The OpenID Provider allows authorized users to use their author URL as an OpenID, either using their local WordPress username and password, or by delegating to another OpenID Provider."
 msgstr "Le Fournisseur d'OpenID permet aux utilisateurs enregistrés d'utiliser leur URL d'auteur comme OpenID, soit en se servant de leur compte et mot de passe WordPress, soit en déléguant un autre fournisseur d'OpenID."
 
+#: admin_panels.php:177
 #@ openid
-#: admin_panels.php:175
 msgid "Enable OpenID"
 msgstr "Activer OpenID"
 
+#: admin_panels.php:180
 #@ openid
-#: admin_panels.php:178
 msgid "Enable the local OpenID Provider for these roles:"
 msgstr "Activer le Fournisseur d'OpenID local pour ces rôles&nbsp;:"
 
+#: admin_panels.php:203
 #@ openid
-#: admin_panels.php:201
 msgid "Blog Owner"
 msgstr "Propriétaire du blog"
 
-#@ openid
-#: admin_panels.php:206
+#: admin_panels.php:208
 #, php-format
+#@ openid
 msgid "Authorized accounts on this blog can use their author URL (i.e. <em>%1$s</em>) as an OpenID. The Blog Owner will be able to use the blog address (%2$s) as their OpenID.  If this is a single-user blog, you should set this to your account."
 msgstr "Les comptes autorisés sur ce blog peuvent utiliser leur URL d'auteur (i.e. <em>%1$s</em>) comme OpenID. Le propriétaire du blog peut, lui, utiliser l'adresse du blog (%2$s) comme OpenID.  S'il n'y a qu'un utilisateur sur ce blog, vous devriez configurer ainsi votre compte."
 
+#: admin_panels.php:217
 #@ openid
-#: admin_panels.php:215
 msgid "A Blog Owner cannot be set for this blog.  To set a Blog Owner, first remove the following line from your <code>wp-config.php</code>:"
 msgstr "Le propriétaire du blog ne peut pas être défini sur ce blog. Pour le définir, commencez par retirer la ligne suivante du fichier <code>wp-config.php</code>&nbsp;:"
 
+#: admin_panels.php:224
 #@ openid
-#: admin_panels.php:222
 msgid "(none)"
 msgstr "(aucun)"
 
-#@ openid
-#: admin_panels.php:232
+#: admin_panels.php:234
 #, php-format
+#@ openid
 msgid "Only the current Blog Owner (%s) can change this setting."
 msgstr "Seul le propriétaire de ce blog (%s) est autorisé à faire ce réglage."
 
+#: admin_panels.php:301
 #@ openid
-#: admin_panels.php:283
 msgid "Troubleshooting"
 msgstr "Dysfonctionnements"
 
-#@ openid
-#: admin_panels.php:287
+#: admin_panels.php:305
 #, php-format
+#@ openid
 msgid "If users are experiencing problems logging in with OpenID, it may help to %1$srefresh the cache%2$s."
 msgstr "En cas de difficulté à se connecter avec un OpenID, il peut être nécessaire de %1$srafraîchir le cache%2$s."
 
+#: admin_panels.php:312
 #@ default
-#: admin_panels.php:294
 msgid "Save Changes"
 msgstr "Enregistrer les modifications"
 
+#: admin_panels.php:332
 #@ openid
-#: admin_panels.php:314
 msgid "Success:"
 msgstr "Succès&nbsp;"
 
+#: admin_panels.php:335
 #@ openid
-#: admin_panels.php:317
 msgid "Warning:"
 msgstr "Avertissement&nbsp;"
 
+#: admin_panels.php:338
+#: admin_panels.php:342
 #@ openid
-#: admin_panels.php:320
-#: admin_panels.php:324
 msgid "Error:"
 msgstr "Erreur&nbsp;"
 
+#: admin_panels.php:354
 #@ openid
-#: admin_panels.php:336
 msgid "Your Verified OpenIDs"
 msgstr "Vos OpenIDs vérifiés"
 
+#: admin_panels.php:358
 #@ openid
-#: admin_panels.php:340
 msgid "You may associate one or more OpenIDs with your account.  This will allow you to login to WordPress with your OpenID instead of a username and password.  <a href=\"http://openid.net/what/\" target=\"_blank\">Learn more...</a>"
 msgstr "Vous pouvez associer un ou plusieurs OpenIDs à votre compte, ce qui vous permettra de vous connecter à WordPress avec votre OpenID plutôt qu'avec votre nom d'utilisateur et votre mot de passe. <a href=\"http://openid.net/what/\" target=\"_blank\">En savoir plus…</a>"
 
+#: admin_panels.php:363
+#: admin_panels.php:498
 #@ default
-#: admin_panels.php:345
-#: admin_panels.php:480
 msgid "Bulk Actions"
 msgstr "Actions multiples"
 
+#: admin_panels.php:364
+#: admin_panels.php:499
 #@ default
-#: admin_panels.php:346
-#: admin_panels.php:481
 msgid "Delete"
 msgstr "Supprimer"
 
+#: admin_panels.php:366
+#: admin_panels.php:501
 #@ default
-#: admin_panels.php:348
-#: admin_panels.php:483
 msgid "Apply"
 msgstr "Appliquer"
 
+#: admin_panels.php:378
 #@ openid
-#: admin_panels.php:360
 msgid "Account"
 msgstr "Compte"
 
+#: admin_panels.php:387
 #@ openid
-#: admin_panels.php:369
 msgid "No Verified Accounts."
 msgstr "Aucun compte vérifié."
 
+#: admin_panels.php:406
+#: admin_panels.php:412
 #@ openid
-#: admin_panels.php:388
-#: admin_panels.php:394
 msgid "Add OpenID"
 msgstr "Ajouter un OpenID"
 
-#@ openid
-#: admin_panels.php:435
+#: admin_panels.php:453
 #, php-format
+#@ openid
 msgid "Added %d trusted site."
 msgid_plural "Added %d trusted sites."
 msgstr[0] "%d site de confiance ajouté."
 msgstr[1] "%d sites de confiance ajoutés."
 
-#@ openid
-#: admin_panels.php:458
+#: admin_panels.php:476
 #, php-format
+#@ openid
 msgid "Deleted %d trusted site."
 msgid_plural "Deleted %d trusted sites."
 msgstr[0] "%d site de confiance supprimé."
 msgstr[1] "%d sites de confiance supprimés."
 
+#: admin_panels.php:492
 #@ openid
-#: admin_panels.php:474
 msgid "This is a list of sites that you can automatically login to using your OpenID account.  You will not be asked to approve OpenID login requests for your trusted sites."
 msgstr "Voici la liste de sites sur lesquels vous pouvez vous connecter automatiquement avec votre OpenID. Il ne vous sera pas demandé d'approuvé la connexion OpenID pour vos sites autorisés."
 
+#: admin_panels.php:513
 #@ default
-#: admin_panels.php:495
 msgid "URL"
 msgstr "URL"
 
+#: admin_panels.php:514
 #@ openid
-#: admin_panels.php:496
 msgid "Last Login"
 msgstr "Dernière connexion"
 
+#: admin_panels.php:522
 #@ openid
-#: admin_panels.php:504
 msgid "No Trusted Sites."
 msgstr "Aucun Site de Confiance."
 
+#: admin_panels.php:553
 #@ openid
-#: admin_panels.php:535
 msgid "Import Trusted Sites"
 msgstr "Importer des sites de confiance"
 
+#: admin_panels.php:555
 #@ openid
-#: admin_panels.php:537
 msgid "Enter a list of URLs to be added to your Trusted Sites."
 msgstr "Entrer une liste d'URL à ajouter à vos sites de confiances."
 
+#: admin_panels.php:559
+#: admin_panels.php:569
 #@ openid
-#: admin_panels.php:541
-#: admin_panels.php:551
 msgid "Add Sites"
 msgstr "Ajouter des sites"
 
+#: admin_panels.php:561
 #@ openid
-#: admin_panels.php:543
 msgid "(One URL per line)"
 msgstr "(Une URL par ligne)"
 
+#: admin_panels.php:655
 #@ openid
-#: admin_panels.php:637
 msgid "Status information:"
 msgstr "Status de fonctionnement&nbsp;"
 
+#: admin_panels.php:655
 #@ openid
-#: admin_panels.php:637
 msgid "All Systems Nominal"
 msgstr "Tous Systèmes Opérationnels"
 
+#: admin_panels.php:656
 #@ openid
-#: admin_panels.php:638
 msgid "System Status"
 msgstr "Status système"
 
+#: admin_panels.php:656
 #@ openid
-#: admin_panels.php:638
 msgid "Toggle More/Less"
 msgstr "Basculer Plus/Moins"
 
+#: admin_panels.php:658
 #@ openid
-#: admin_panels.php:640
 msgid "Plugin is currently disabled. Fix the problem, then Deactivate/Reactivate the plugin."
 msgstr "L'extension est actuellement désactivée. Corrigez le problème, puis désactivez/réactivez l'extension."
 
+#: admin_panels.php:666
 #@ openid
-#: admin_panels.php:648
 msgid "FAIL"
 msgstr "ÉCHEC"
 
+#: admin_panels.php:668
 #@ openid
-#: admin_panels.php:650
 msgid "OK"
 msgstr "OK"
 
+#: admin_panels.php:670
 #@ openid
-#: admin_panels.php:652
 msgid "INFO"
 msgstr "INFO"
 
+#: admin_panels.php:704
 #@ openid
-#: admin_panels.php:686
 msgid "You already have this OpenID!"
 msgstr "Cet OpenID est déjà enregistré&nbsp;!"
 
+#: admin_panels.php:706
 #@ openid
-#: admin_panels.php:688
 msgid "This OpenID is already associated with another user."
 msgstr "Cet OpenID est déjà associé à un autre utilisateur."
 
+#: admin_panels.php:727
 #@ openid
-#: admin_panels.php:709
 msgid "Unable to authenticate OpenID."
 msgstr "Authentification OpenID impossible."
 
+#: admin_panels.php:728
 #@ openid
-#: admin_panels.php:710
 msgid "OpenID assertion successful, but this URL is already associated with another user on this blog."
 msgstr "L'ajout d'OpenID a fonctionné mais cet OpenID est déjà associé à un autre utilisateur."
 
+#: admin_panels.php:729
 #@ openid
-#: admin_panels.php:711
 msgid "Added association with OpenID."
 msgstr "Association OpenID ajoutée."
 
+#: admin_panels.php:741
+#: admin_panels.php:811
 #@ openid
-#: admin_panels.php:723
-#: admin_panels.php:793
 msgid "<strong>Note:</strong> For security reasons, your profile URL has been updated to match your OpenID."
 msgstr "<strong>NB&nbsp;:</strong> Pour des raisons de sécurité, l'URL de votre profil a été mise à jour pour correspondre à votre OpenID."
 
+#: admin_panels.php:767
+#: admin_panels.php:784
 #@ openid
-#: admin_panels.php:749
-#: admin_panels.php:766
 msgid "OpenID Warning"
 msgstr "Avertissement OpenID"
 
+#: admin_panels.php:769
 #@ openid
-#: admin_panels.php:751
 msgid "Are you sure you want to delete all of your OpenID associations? Doing so may prevent you from logging in."
 msgstr "Êtes-vous sûr de vouloir supprimer toutes les associations OpenID&nbsp;? Vous risquez de ne plus pouvoir vous connecter."
 
+#: admin_panels.php:771
 #@ openid
-#: admin_panels.php:753
 msgid "Yes I'm sure. Delete."
 msgstr "Oui, je confirme la suppression."
 
+#: admin_panels.php:772
 #@ openid
-#: admin_panels.php:754
 msgid "No, don't delete."
 msgstr "Non, ne pas supprimer."
 
-#@ openid
-#: admin_panels.php:781
+#: admin_panels.php:799
 #, php-format
+#@ openid
 msgid "Deleted %d OpenID association."
 msgid_plural "Deleted %d OpenID associations."
 msgstr[0] "%d association OpenID supprimée."
 msgstr[1] "%d associations OpenID supprimées."
 
+#: admin_panels.php:817
 #@ openid
-#: admin_panels.php:799
 msgid "OpenID association delete failed: Unknown reason."
 msgstr "Erreur inconnue lors de la suppression de l'association OpenID."
 
-#@ openid
-#: admin_panels.php:855
+#: admin_panels.php:873
 #, php-format
+#@ openid
 msgid "For security reasons, your profile URL must be one of your claimed OpenIDs: %s"
 msgstr "Pour des raisons de sécurité, l'URL de votre profil doit être l'un de vos OpenIDs déclarés&nbsp;: %s"
 
+#: admin_panels.php:910
 #@ openid
-#: admin_panels.php:892
 msgid "OpenID Delegation"
 msgstr "Délégation OpenID"
 
+#: admin_panels.php:912
 #@ openid
-#: admin_panels.php:894
 msgid "OpenID Delegation allows you to use an external OpenID provider of your choice."
 msgstr "La Délégation d'OpenID vous permet d'utiliser le fournisseur externe d'OpenID de votre choix."
 
+#: admin_panels.php:915
 #@ openid
-#: admin_panels.php:897
 msgid "To delegate, enter a valid OpenID. Otherwise leave this blank."
 msgstr "Pour la délégation, entrer un OpenID valide. Sinon, laisser le champ vide."
 
-#@ openid
-#: admin_panels.php:934
+#: admin_panels.php:952
 #, php-format
+#@ openid
 msgid "Unable to find any OpenID information for delegate URL %s"
 msgstr "Impossible de trouver l'information OpenID pour l'URL déléguée %s"
 
+#: admin_panels.php:962
 #@ openid
-#: admin_panels.php:944
 msgid "You cannot delegate to an OpenID provider which uses Identifier Select."
 msgstr "Vous ne pouvez pas déléguer vers un fournisseur d'OpenID qui utilise la sélection d'identifiant."
 
+#: admin_panels.php:983
 #@ openid
-#: admin_panels.php:965
 msgid "New accounts can only be created with verified OpenIDs."
 msgstr "Les nouveaux comptes ne peuvent être créés qu'avec un OpenID vérifié."
 
+#: admin_panels.php:1022
 #@ openid
-#: admin_panels.php:1004
 msgid "New accounts can only be created with verified OpenIDs"
 msgstr "Les nouveaux comptes ne peuvent être créés qu'avec un OpenID vérifié."
 
+#: admin_panels.php:1045
 #@ openid
-#: admin_panels.php:1027
 msgid "Enable OpenID for comments"
 msgstr "Autoriser les commentaires signés avec OpenID"
 
-#@ openid
-#: admin_panels.php:1037
+#: admin_panels.php:1055
 #, fuzzy
+#@ openid
 msgid "Do not require name and e-mail for comments left with a verified OpenID"
 msgstr "Permettre de saisir les commentaires avec un OpenID vérifié sans nom ni adresse courriel."
 
-#@ openid
-#: admin_panels.php:1045
+#: admin_panels.php:1063
 #, fuzzy
+#@ openid
 msgid "Always approve comments left with a verified OpenID"
 msgstr "Permettre de saisir les commentaires avec un OpenID vérifié sans nom ni adresse courriel."
 
-#@ openid
 #: comments.php:106
+#@ openid
 msgid "Error: please fill the required fields (name, email)."
 msgstr "Erreur : merci de compléter les champs obligatoires (nom, courriel)."
 
-#@ openid
 #: comments.php:108
+#@ openid
 msgid "Error: please enter a valid email address."
 msgstr "Erreur : merci de saisir une adresse courriel valide."
 
-#@ openid
 #: comments.php:258
+#@ openid
 msgid "Authenticate this comment using <span class=\"openid_link\">OpenID</span>."
 msgstr "Authentifier ce commentaire avec votre <span class=\"openid_link\">OpenID</span>."
 
-#@ openid
 #: comments.php:271
 #: comments.php:289
+#@ openid
 msgid "OpenID Authentication Error"
 msgstr "Erreur d'authentification OpenID"
 
-#@ openid
 #: comments.php:273
+#@ openid
 msgid "We were unable to authenticate your claimed OpenID, however you can continue to post your comment without OpenID:"
 msgstr "Nous n'avons pas été capable d'authentifier l'OpenID indiqué, toutefois vous pouvez continuer de poster votre commentaire sans OpenID&nbsp;:"
 
-#@ default
 #: comments.php:280
+#@ default
 msgid "Submit Comment"
 msgstr "Soumettre le commentaire"
 
-#@ openid
 #: common.php:342
+#@ openid
 msgid "User was created fine, but wp_login() for the new user failed. This is probably a bug."
 msgstr "L'utilisateur a bien été créé, mais l'appel à <code>wp_login()</code> pour ce nouvel utilisateur a échoué. Ceci est probablement un bug."
 
-#@ openid
 #: common.php:363
+#@ openid
 msgid "OpenID authentication successful, but failed to create WordPress user. This is probably a bug."
 msgstr "L'authentification OpenID a fonctionné, mais la création de l'utilisateur a échoué. Ceci est probablement un bug."
 
-#@ openid
 #: common.php:680
+#@ openid
 msgid "Since your browser does not support JavaScript, you must press the Continue button once to proceed."
 msgstr "JavaScript n'est pas activé ou n'est pas supporté par votre navigateur. Pour poursuivre, appuyez sur le bouton Continuer."
 
-#@ default
-#@ openid
 #: common.php:688
 #: server.php:236
 #: server.php:480
+#@ default
+#@ openid
 msgid "Continue"
 msgstr "Continuer"
 
-#@ openid
 #: common.php:692
+#@ openid
 msgid "Please Wait..."
 msgstr "Veuillez patienter&hellip;"
 
-#@ openid
 #: common.php:696
+#@ openid
 msgid "OpenID Authentication Redirect"
 msgstr "Redirection d'authentification OpenID"
 
-#@ openid
 #: consumer.php:90
+#@ openid
 msgid "OpenID login was cancelled."
 msgstr "La connexion OpenID a été annulée."
 
-#@ openid
 #: consumer.php:95
 #, php-format
+#@ openid
 msgid "OpenID login failed: %s"
 msgstr "Échec de la connexion OpenID²nbsp;: %s"
 
-#@ openid
 #: consumer.php:100
+#@ openid
 msgid "OpenID login successful"
 msgstr "Connexion OpenID réussie"
 
-#@ openid
 #: consumer.php:108
 #, fuzzy
+#@ openid
 msgid "Unknown Status. Bind not successful. This is probably a bug."
 msgstr "Status inconnu. Échec lors du bind. Ceci est probablement un bug."
 
-#@ openid
 #: consumer.php:155
 #, php-format
+#@ openid
 msgid "Could not discover an OpenID identity server endpoint at the url: %s"
 msgstr "Aucun serveur d'identité OpenID détecté sur l'URL %s"
 
+#: login.php:62
 #@ openid
-#: login.php:60
 msgid "Your have entered a valid OpenID, but this site is not currently accepting new accounts."
 msgstr "L'OpenID saisi est valide, mais ce site n'accepte actuellement pas de nouveaux comptes."
 
+#: login.php:169
 #@ openid
-#: login.php:147
 msgid "Or login using an OpenID"
 msgstr "Ou se connecter avec un OpenID"
 
+#: login.php:174
+#: login.php:225
 #@ openid
-#: login.php:152
-#: login.php:200
 msgid "Learn about OpenID"
 msgstr "En savoir plus sur OpenID"
 
+#: login.php:192
 #@ openid
-#: login.php:167
 msgid "Register using an OpenID:"
 msgstr "S'enregistrer en utilisant un OpenID&nbsp;:"
 
+#: login.php:205
 #@ openid
-#: login.php:180
 msgid "Or register using an OpenID:"
 msgstr "Ou connectez-vous en utilisant un OpenID&nbsp;:"
 
+#: login.php:251
+#: login.php:262
 #@ openid
-#: login.php:226
-#: login.php:237
 msgid "<strong>ERROR</strong>: "
 msgstr "<strong>ERREUR</strong>&nbsp;: "
 
+#: login.php:251
 #@ openid
-#: login.php:226
 msgid "New users must register using OpenID."
 msgstr "Les nouveaux utilisateurs doivent s'enregistrer avec un OpenID."
 
-#@ openid
 #: server.php:227
+#@ openid
 msgid "OpenID Login Error"
 msgstr "Erreur lors de la connexion OpenID"
 
-#@ openid
 #: server.php:229
 #, php-format
+#@ openid
 msgid "Because you have delegated your OpenID, you cannot login with the URL <strong>%s</strong>. Instead, you must use your full OpenID when logging in."
 msgstr "Votre OpenID étant délégué, vous ne pouvez pas vous connecter avec l'URL <strong>%s</strong>. Il faut utiliser votre OpenID complet à la connexion."
 
-#@ openid
 #: server.php:231
 #, php-format
+#@ openid
 msgid "Your full OpenID is: %s"
 msgstr "Votre OpenID complet est&nbsp;: %s"
 
-#@ openid
 #: server.php:459
 #, php-format
+#@ openid
 msgid "Logged in as %1$s (%2$s). <a href=\"%3$s\">Use a different account?</a>"
 msgstr "Connecté en tant que %1$s (%2$s). <a href=\"%3$s\">Changer de compte</a>"
 
-#@ openid
 #: server.php:466
 #: server.php:500
+#@ openid
 msgid "Verify Your Identity"
 msgstr "Vérifiez votre identité"
 
-#@ openid
 #: server.php:468
 #, php-format
+#@ openid
 msgid "%s has asked to verify your identity."
 msgstr "%s a demandé la vérification de votre identité."
 
-#@ openid
 #: server.php:472
+#@ openid
 msgid "Click <strong>Continue</strong> to verify your identity and login without creating a new password."
 msgstr "Appuyez sur <strong>Continuer</strong> pour vérifier votre identité et vous connecter sans créer de nouveau mot de passe."
 
-#@ openid
 #: server.php:479
+#@ openid
 msgid "Cancel and go back"
 msgstr "Annuler et revenir en arrière"
 
-#@ openid
 #: server.php:484
 #, php-format
+#@ openid
 msgid "Manage or remove access on the <a href=\"%s\" target=\"_blank\">Trusted Sites</a> page."
 msgstr "Gérer ou supprimer les accès sur la page <a href=\"%s\" target=\"_blank\">Sites de confiance</a>."
 
 #  Target=_blank non conforme à XHTML 1.1
-#@ openid
 #: server.php:488
 #, php-format
+#@ openid
 msgid "<a href=\"%s\" target=\"_blank\">Edit your profile</a> to change the information that gets shared with Trusted Sites."
 msgstr "<a href=\"%s\" target=\"_blank\">Éditer votre profil</a> pour modifier l'information partagée avec les sites de confiance."
 
-#@ openid
 #: server_ext.php:63
-#, fuzzy, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format
+#@ openid
 msgid "Also grant access to see my %s."
 msgstr "Autoriser également la consultation de mon %s."
 
+#: admin_panels.php:244
 #@ openid
-#: admin_panels.php:242
 msgid "Disallow Password authentification"
 msgstr "Interdire l'authentification par mot de passe"
 
+#: admin_panels.php:255
 #@ openid
-#: admin_panels.php:253
 msgid "Disable Password auth for accounts with openid enabled"
 msgstr "Interdire l'authentification par mot de passe pour les comptes pour lesquels openid est activé"
 
+#: admin_panels.php:262
 #@ openid
-#: admin_panels.php:260
 msgid "Regex"
 msgstr "Expression Régulières"
 
+#: admin_panels.php:274
 #@ openid
-#: admin_panels.php:265
-msgid "Regex for allowed openid (ingored if empty) for syntax look <a href=\"http://www.php.net/manual/fr/function.preg-match.php\">here</a>"
-msgstr "Expression régulière sur les url openid autorisés (ignoré si vide)  pour la syntaxe : <a href=\"http://www.php.net/manual/fr/function.preg-match.php\">la documentation</a>"
-
-#@ openid
-#: admin_panels.php:272
 msgid "If openid url apply this regex the account will become editor(ingored if empty) for syntax look <a href=\"http://www.php.net/manual/fr/function.preg-match.php\">here</a>"
 msgstr "Expression  régulière sur l'url openid pour lesquels les comptes vont devenir éditeur. Pour la syntaxe : <a href=\"http://www.php.net/manual/fr/function.preg-match.php\">la documentation</a>"
+
+#: admin_panels.php:267
+#@ openid
+msgid "Regex for allowed openid (ignored if empty) for syntax look <a href=\"http://www.php.net/manual/fr/function.preg-match.php\">here</a>"
+msgstr "Expression régulière pour les URL autorisées (ignoré si vide). Pour la syntaxe : <a href=\"http://www.php.net/manual/fr/function.preg-match.php\">la documentation</a>"
+
+#: admin_panels.php:282
+#@ openid
+msgid "Regex for allowed email returned by openid (ignored if empty) for syntax look <a href=\"http://www.php.net/manual/fr/function.preg-match.php\">here</a>"
+msgstr "Expression régulière sur l'email retourné par openid pour les login authorisés. Pour la syntaxe : <a href=\"http://www.php.net/manual/fr/function.preg-match.php\">la documentation</a>"
+
+#: admin_panels.php:290
+#@ openid
+msgid "If openid email returned by openid apply this regex the account will become editor(ingored if empty) for syntax look <a href=\"http://www.php.net/manual/fr/function.preg-match.php\">here</a>"
+msgstr "Expression régulière sur l'email retourné par openid pour lesquels les comptes vont devenir éditeur. Pour la syntaxe : <a href=\"http://www.php.net/manual/fr/function.preg-match.php\">la documentation</"
 
