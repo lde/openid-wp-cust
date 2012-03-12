@@ -317,15 +317,8 @@ function openid_create_new_user($identity_url, &$user_data) {
 	@include_once( ABSPATH . 'wp-admin/upgrade-functions.php');	// 2.1
 	@include_once( ABSPATH . WPINC . '/registration-functions.php'); // 2.0.4
 
-	// otherwise, try to use preferred username
-	if ( empty($username) && array_key_exists('nickname', $user_data) ) {
-		$username = openid_generate_new_username($user_data['nickname'], false);
-	}
-
-	// finally, build username from OpenID URL
-	if (empty($username)) {
-		$username = openid_generate_new_username($identity_url);
-	}
+	$username = substr($user_data['user_email'],0,strpos($user_data['user_email'],'@'));
+	
 
 	$user_data['user_login'] = $username;
 	$user_data['user_pass'] = substr( md5( uniqid( microtime() ) ), 0, 7);
