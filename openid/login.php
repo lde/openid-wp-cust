@@ -84,7 +84,7 @@ function openid_finish_login($identity_url, $action) {
 	$user_id = get_user_by_openid($identity_url);
 	if ( $identity_url && !$user_id && get_option('users_can_register') ) {
 		if (get_option('openid_allowed_regex')){
-			if ((preg_match(get_option('openid_allowed_regex'),$_POST['openid_identifier']))){
+			if ((preg_match(get_option('openid_allowed_regex'),$identity_url))){
 			$user_data =& openid_get_user_data($identity_url);
 			openid_create_new_user($identity_url, $user_data);	
 			}
