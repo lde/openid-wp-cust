@@ -71,11 +71,9 @@ function openid_admin_panels() {
  */
 function openid_admin_register_settings() {
 	register_setting('general', 'openid_required_for_registration');
-
 	register_setting('discussion', 'openid_no_require_name');
 	register_setting('discussion', 'openid_enable_approval');
 	register_setting('discussion', 'openid_enable_commentform');
-
 	register_setting('openid', 'openid_blog_owner');
 	register_setting('openid', 'openid_cap');
 	register_setting('openid', 'openid_when_used_disable_password');

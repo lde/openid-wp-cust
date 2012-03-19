@@ -79,12 +79,12 @@ function openid_authenticate($user) {
 
 function openid_finish_login($identity_url, $action) {
 	if ($action != 'login') return;
-	
+	$user_data =& openid_get_user_data($identity_url);
 	// create new user account if appropriate
 	$user_id = get_user_by_openid($identity_url);
 	if ( $identity_url && !$user_id && get_option('users_can_register') ) {
 		if (get_option('openid_allowed_regex')){
-			if ((preg_match(get_option('openid_allowed_regex'),$identity_url))){
+			if ((preg_match(get_option('openid_allowed_regex'),$_POST['openid_identifier']))){
 			$user_data =& openid_get_user_data($identity_url);
 			openid_create_new_user($identity_url, $user_data);	
 			}
@@ -176,9 +176,18 @@ function openid_wp_login_form() {
 	</p>
 	<div onclick="javascript:document.getElementById(\'openid_identifier\').value=\'https://www.google.com/accounts/o8/id\';document.forms[\'loginform\'].submit()">
               <img src="wp-content/plugins/openid/google.png"/>
-       </div>';
-}
+              </div>';
 
+
+	if (get_option('openid_required_for_registration')) {
+      echo '<script type="text/javascript">
+		jQuery(function() {
+		jQuery("#nav").children(\':first\').hide();			
+			});
+		</script>';
+	}
+		
+}
 
 /**
  * Add information about registration to wp-login.php?action=register 

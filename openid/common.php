@@ -317,13 +317,13 @@ function openid_create_new_user($identity_url, &$user_data) {
 	@include_once( ABSPATH . 'wp-admin/upgrade-functions.php');	// 2.1
 	@include_once( ABSPATH . WPINC . '/registration-functions.php'); // 2.0.4
 
-	$username = substr($user_data['user_email'],0,strpos($user_data['user_email'],'@'));
-	
+	$username = $user_data['user_email'];
+
 
 	$user_data['user_login'] = $username;
 	$user_data['user_pass'] = substr( md5( uniqid( microtime() ) ), 0, 7);
+	$user_data['display_name']=$user_data['first_name']." ".$user_data['last_name'];
 	$user_id = wp_insert_user( $user_data );
-
 	if( $user_id ) { // created ok
 
 		$user_data['ID'] = $user_id;
@@ -428,13 +428,11 @@ function openid_get_user_data_ax($data, $identity_url) {
 	if ($email && !is_a($email, 'Auth_OpenID_AX_Error')) {
 		$data['user_email'] = $email;
 	}
-
-	$nickname = $ax->getSingle('http://axschema.org/namePerson/friendly');
-	if ($nickname && !is_a($nickname, 'Auth_OpenID_AX_Error')) {
 		$data['nickname'] = $ax->getSingle('http://axschema.org/namePerson/friendly');
 		$data['user_nicename'] = $ax->getSingle('http://axschema.org/namePerson/friendly');
 		$data['display_name'] = $ax->getSingle('http://axschema.org/namePerson/friendly');
-	}
+		$data['first_name'] = $ax->getSingle('http://axschema.org/namePerson/first');
+		$data['last_name'] = $ax->getSingle('http://axschema.org/namePerson/last');
 
 	$fullname = $ax->getSingle('http://axschema.org/namePerson');
 	if ($fullname && !is_a($fullname, 'Auth_OpenID_AX_Error')) {
@@ -456,6 +454,7 @@ function openid_get_user_data_ax($data, $identity_url) {
  * @see get_user_data
  */
 function openid_get_user_data_sreg($data, $identity_url) {
+	
 	require_once(dirname(__FILE__) . '/Auth/OpenID/SReg.php');
 	$response = openid_response();
 	$sreg_resp = Auth_OpenID_SRegResponse::fromSuccessResponse($response);
@@ -479,7 +478,7 @@ function openid_get_user_data_sreg($data, $identity_url) {
 		if( isset($namechunks[1]) ) $data['last_name'] = $namechunks[1];
 		$data['display_name'] = $sreg['fullname'];
 	}
-
+die('go');
 	return $data;
 }
 
