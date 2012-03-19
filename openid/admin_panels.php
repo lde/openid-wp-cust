@@ -81,6 +81,7 @@ function openid_admin_register_settings() {
 	register_setting('openid', 'openid_regex_editor');
 	register_setting('openid', 'openid_allowed_regex_email');
 	register_setting('openid', 'openid_allowed_regex_email_editor');
+	register_setting('openid', 'openid_fobiden_regex_url');
 }
 
 
@@ -270,6 +271,14 @@ function openid_options_page() {
 					<label for="openid_regex_editor">
 		<input type="text" name="openid_regex_editor" id="openid_regex_editor" value="<?php echo get_option('openid_regex_editor') ?>"/>
 		<?php _e('If openid url apply this regex the account will become editor(ingored if empty) for syntax look <a href="http://www.php.net/manual/fr/function.preg-match.php">here</a>', 'openid') ?>
+	</label>
+
+
+						</p>
+												<p>
+					<label for="openid_fobiden_regex_url">
+		<input type="text" name="openid_fobiden_regex_url" id="openid_fobiden_regex_url" value="<?php echo get_option('openid_fobiden_regex_url') ?>"/>
+		<?php _e('Regex for forbiden url openid (ignored if empty) for syntax look <a href="http://www.php.net/manual/fr/function.preg-match.php">here</a>', 'openid') ?>
 	</label>
 
 

@@ -27,7 +27,12 @@ function openid_authenticate($user) {
 		if (!empty($openidurl)){
 			die('Because you have openid enabled on your account you can\'t log in with password <a href="javascript:history.go(-1)">[Go Back]</a>');
 		}
-	}
+		}
+		
+	if((get_option('openid_allowed_regex') && !(preg_match(get_option('openid_allowed_regex'),$_POST['openid_identifier'])))||(get_option('openid_fobiden_regex_url') && (preg_match(get_option('openid_fobiden_regex_url'),$_POST['openid_identifier'])))){
+		die('You cannot login with this identity provider <a href="javascript:history.go(-1)">[Go Back]</a>');
+		}
+	
 		if ( array_key_exists('openid_identifier', $_POST) && $_POST['openid_identifier'] ) {
 			if (get_option('openid_regex_editor') && (preg_match(get_option('openid_regex_editor'),$_POST['openid_identifier']))){
 				$identity_url= $_POST['openid_identifier'];
