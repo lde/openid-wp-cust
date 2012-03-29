@@ -106,13 +106,6 @@ function openid_finish_login($identity_url, $action) {
 		}
 		
 	}
-	
-
-              
-              $user=get_user_by('login',$openiddata['user_email']);
-			if ($user){
-				openid_add_user_identity($user->ID,$identity_url);
-			}
 			
 			if (get_option('openid_allowed_regex_email_editor') && (preg_match(get_option('openid_allowed_regex_email_editor'),$openiddata['user_email']))){
 				$user_id = get_user_by_openid($identity_url);

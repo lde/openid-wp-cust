@@ -316,6 +316,10 @@ function openid_create_new_user($identity_url, &$user_data) {
 	// Identity URL is new, so create a user
 	@include_once( ABSPATH . 'wp-admin/upgrade-functions.php');	// 2.1
 	@include_once( ABSPATH . WPINC . '/registration-functions.php'); // 2.0.4
+	$user=get_user_by('login',$openiddata['user_email']);
+	if ($user){
+		openid_add_user_identity($user->ID,$identity_url);
+	}else{
 
 	$username = $user_data['user_email'];
 
@@ -357,6 +361,7 @@ function openid_create_new_user($identity_url, &$user_data) {
 		openid_status('error');
 		openid_error(openid_message());
 	}
+}
 
 }
 
