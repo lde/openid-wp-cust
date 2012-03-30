@@ -316,52 +316,54 @@ function openid_create_new_user($identity_url, &$user_data) {
 	// Identity URL is new, so create a user
 	@include_once( ABSPATH . 'wp-admin/upgrade-functions.php');	// 2.1
 	@include_once( ABSPATH . WPINC . '/registration-functions.php'); // 2.0.4
+	$openiddata=openid_get_user_data($identity_url);
 	$user=get_user_by('login',$openiddata['user_email']);
 	if ($user){
 		openid_add_user_identity($user->ID,$identity_url);
+		openid_status('redirect');
 	}else{
 
-	$username = $user_data['user_email'];
+		$username = $user_data['user_email'];
 
 
-	$user_data['user_login'] = $username;
-	$user_data['user_pass'] = substr( md5( uniqid( microtime() ) ), 0, 7);
-	$user_data['display_name']=$user_data['first_name']." ".$user_data['last_name'];
-	$user_id = wp_insert_user( $user_data );
-	if( $user_id ) { // created ok
+		$user_data['user_login'] = $username;
+		$user_data['user_pass'] = substr( md5( uniqid( microtime() ) ), 0, 7);
+		$user_data['display_name']=$user_data['first_name']." ".$user_data['last_name'];
+		$user_id = wp_insert_user( $user_data );
+		if( $user_id ) { // created ok
 
-		$user_data['ID'] = $user_id;
-		// XXX this all looks redundant, see openid_set_current_user
+			$user_data['ID'] = $user_id;
+			// XXX this all looks redundant, see openid_set_current_user
 
-		$user = new WP_User( $user_id );
+			$user = new WP_User( $user_id );
 
-		if( ! wp_login( $user->user_login, $user_data['user_pass'] ) ) {
-			openid_message(__('User was created fine, but wp_login() for the new user failed. This is probably a bug.', 'openid'));
+			if( ! wp_login( $user->user_login, $user_data['user_pass'] ) ) {
+				openid_message(__('User was created fine, but wp_login() for the new user failed. This is probably a bug.', 'openid'));
+				openid_status('error');
+				openid_error(openid_message());
+				return;
+			}
+
+			// notify of user creation
+			wp_new_user_notification( $user->user_login );
+
+			wp_clearcookie();
+			wp_setcookie( $user->user_login, md5($user->user_pass), true, '', '', true );
+
+			// Bind the provided identity to the just-created user
+			openid_add_user_identity($user_id, $identity_url);
+
+			openid_status('redirect');
+
+			if ( !$user->has_cap('edit_posts') ) $redirect_to = '/wp-admin/profile.php';
+
+		} else {
+			// failed to create user for some reason.
+			openid_message(__('OpenID authentication successful, but failed to create WordPress user. This is probably a bug.', 'openid'));
 			openid_status('error');
 			openid_error(openid_message());
-			return;
 		}
-
-		// notify of user creation
-		wp_new_user_notification( $user->user_login );
-
-		wp_clearcookie();
-		wp_setcookie( $user->user_login, md5($user->user_pass), true, '', '', true );
-
-		// Bind the provided identity to the just-created user
-		openid_add_user_identity($user_id, $identity_url);
-
-		openid_status('redirect');
-
-		if ( !$user->has_cap('edit_posts') ) $redirect_to = '/wp-admin/profile.php';
-
-	} else {
-		// failed to create user for some reason.
-		openid_message(__('OpenID authentication successful, but failed to create WordPress user. This is probably a bug.', 'openid'));
-		openid_status('error');
-		openid_error(openid_message());
 	}
-}
 
 }
 
